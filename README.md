@@ -4,4 +4,4 @@ I built a 4-bit ALU using the Hardware Description Language (HDL) Verilog. This 
 
 The same ALU was constructed in 2 different ways. One way utilizes cases to create a 1-bit ALU that was scaled up to a 4-bit ALU utilizing instances of the 1-but ALU. The other method follows the general structure of an ALU that uses hardware such as full adders and mux (multiplexers). 
 
-This project was completed within a few hours of a day.
+This project was completed within a few hours over the course of 2 days.
