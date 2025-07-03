@@ -1,4 +1,6 @@
-//This testbench can run for either file and should work as expected due to //encapuslation (modules have the same names despite their functionality to //get to the same result being different)
+//This testbench can run for either file and should work as expected due to 
+//encapuslation (modules have the same names despite their functionality to 
+//get to the same result being different)
 
 module testbench;
   reg a1, b1, cin1, cin4;
