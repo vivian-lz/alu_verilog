@@ -2,6 +2,10 @@
 
 I built a 4-bit ALU using the Hardware Description Language (HDL) Verilog. This ALU has a 2-bit opcode that creates 4 selectable options: Add, Subtract, logical AND, and logical OR. The Add and Subtract methods utilize twos complement digital logic.
 
-The same ALU was constructed in 2 different ways. One way utilizes cases to create a 1-bit ALU that was scaled up to a 4-bit ALU utilizing instances of the 1-but ALU. The other method follows the general structure of an ALU that uses hardware such as full adders and mux (multiplexers). 
+The same ALU was constructed in 2 different ways. One way utilizes cases to create a 1-bit ALU that was scaled up to a 4-bit ALU utilizing instances of the 1-but ALU. The other method follows the general structure of an ALU that uses hardware such as full adders and mux (multiplexers).
 
-This project was completed within a few hours over the course of 2 days.
+Both ALUs are encapuslated such that they use the same method names, so to the user calling either version should appear to be the exact same even though they functionally each work differently in each file (the cases method versus the structural method). As a result, there is only 1 testbench file to conduct design verification for this ALU that should be applicable to either alu design file.
+
+This project was completed within a few hours over the course of about 3 days.
+
+Creating this was inspried by a course I took last semester during my sophomore spring (Spring 2025: ECE 2123L: Digital Systems Laboratory). In the lecture, I learned basic HDL and Verilog skills and applied some of it in the laboratory, but I did not have as confident of a grasp of the language as I would have liked to complete more advanced projects on my own, so I utilized hdlbits.com to learn Verilog as shown in a different GitHub repo and made this project as an introduction for me to create more advanced projects in the future and showcase my growth in skill through learning this language as a student interested in circuit design and design verification to create electronics.
