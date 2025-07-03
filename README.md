@@ -4,7 +4,7 @@ I built a 4-bit ALU using the Hardware Description Language (HDL) Verilog. This 
 
 The same ALU was constructed in 2 different ways. One way utilizes cases to create a 1-bit ALU that was scaled up to a 4-bit ALU utilizing instances of the 1-but ALU. The other method follows the general structure of an ALU that uses hardware such as full adders and mux (multiplexers).
 
-Both ALUs are encapuslated such that they use the same method names, so to the user calling either version should appear to be the exact same even though they functionally each work differently in each file (the cases method versus the structural method). As a result, there is only 1 testbench file to conduct design verification for this ALU that should be applicable to either alu design file.
+Both ALUs are encapuslated such that they use the same method names, so to the user calling either version should appear to be the exact same even though they functionally each work differently in each file (the cases method versus the structural method). As a result, there is only 1 testbench file to conduct design verification for this ALU that should be applicable to either alu design file. I used EDAPlayground to code both my design and testbench (like an IDE).
 
 This project was completed within a few hours over the course of about 3 days.
 
