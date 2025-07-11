@@ -4,8 +4,8 @@
 module alu_1bit(input a, input b, input [1:0] opcode, input cin, output reg result, output reg cout);
   always @(*) begin
     case (opcode)
-      2'b00: {result, cout} = a + b + cin; //addition
-      2'b01: {result, cout} = a + ~b + 1'b1; //twos complement subtraction
+      2'b00: {cout, result} = a + b + cin; //addition
+      2'b01: {cout, result} = a + ~b + 1'b1; //twos complement subtraction
       2'b10: begin
         result = a & b; //AND
         cout = 1'b0;
