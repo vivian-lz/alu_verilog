@@ -169,6 +169,10 @@ module testbench;
     else
       $display("Test passed for 4 bit OR.");
     
+    #10;
+	$display("All tests complete.");
+	$finish;
+    
     end
   
 endmodule
