@@ -16,12 +16,31 @@ module full_adder(input a, input b, input cin, output wire sum, output wire cout
   	assign cout = and1 | and2;
   
 endmodule
+
+module logical_and(input a, input b, output wire result);
+  assign result = a & b;
+endmodule
+
+module logical_or(input a, input b, output wire result);
+  assign result = a | b;
+endmodule
     
 module alu_1bit(input a, input b, input [1:0] opcode, input cin, output result, output cout);
+  wire mux_wire;
   	//full adder and mux
-  	wire mux_wire;
-  mux_2to1 mux (b, ~b, opcode[0], mux_wire);
-  full_adder adder(a, mux_wire, opcode[0], result, cout);
+  always @(*) begin
+  	if(opcode == 2'b00)
+    	mux_2to1 mux1 (b, ~b, 1'b0, mux_wire);
+  		full_adder adder1 (a, mux_wire, cin, result, cout);
+ 	else if(opcode == 2'b01)
+    	mux_2to1 mux2 (b, ~b, 1'b1, mux_wire);
+  		full_adder adder2 (a, mux_wire, cin, result, cout);
+  	else if(opcode == 2'b10)
+  		logical_and andcase (a, b, result);
+  	else //opcode 11
+  		logical_or orcase (a, b, result);
+  	end
+  end
 endmodule
 
 module alu_4bit(input [3:0] a, input [3:0] b, input [1:0] opcode, input cin, output [3:0] result, output cout);
