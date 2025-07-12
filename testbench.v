@@ -43,15 +43,15 @@ module testbench;
     //SUBTRACT FUNCTION
     a1 = 1'b1; b1 = 1'b0; opcode = 2'b01; cin1 = 1'b0; //Subtract
     #10
-    if(result1 !== 1'b1 || cout1 !== 1'b0)
-      $display("Test failed for 1 bit: Correct answer is 1 with 0 carry");
+    if(result1 !== 1'b1 || cout1 !== 1'b1)
+      $display("Test failed for 1 bit: Correct answer is 1 with 1 carry");
     else
       $display("Test passed for 1 bit Subtract.");
     
     a4 = 4'b1111; b4 = 4'b0000; opcode = 2'b01; cin4 = 1'b0;
     #10
-    if(result4 !== 4'b1111 || cout4 !== 1'b0)
-      $display("Test failed for 4 bit: correct answer is 1111 with 0 carry.");
+    if(result4 !== 4'b1111 || cout4 !== 1'b1)
+      $display("Test failed for 4 bit: correct answer is 1111 with 1 carry.");
     else
       $display("Test passed for 4 bit subtract 1111.");
     
